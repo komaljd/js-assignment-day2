@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment one</title>
+    <!-- style here -->
+    <style>
+        body{text-align: center;;}
+        .btn{ padding: 10px 20px; border: 0; background-color:red; color: #fff; cursor: pointer;
+         display: block; margin: 20px auto; }
+    </style>
+</head>
+<body>
+    <!-- print fucnciton -->
+    <h1 style="color:blue; text-align:center">DISPLAY  CURRENT DAY AND TIME</h1>
+    <hr>
+    
+    <h3>Sample Output: <span id="day"> </span></h3>
+
+
+
+   <!-- External script here -->
+   <script>
+          // get current day
+   var dateObj = new Date();
+   var myDay = dateObj.getDay();
+   var weekday = ['Sunday','Monday','Tuesday','Thursday','Friday','Saturday'];
+ 
+   document.getElementById('day').innerHTML= "Today is : " + weekday[myDay];        // display day here
+    
+   // display time value
+   var hours = dateObj.getHours(); 
+    var ampm = hours >= 12 ? 'PM' : 'AM'; 
+    hours = hours % 12; 
+    hours = hours ? hours : 12; 
+    var minutes = dateObj.getMinutes(); 
+    minutes = minutes < 10 ? '0' + minutes : minutes; 
+    var myTime = hours + " " + ampm + " : " + minutes +  
+        " : " + dateObj.getMilliseconds(); 
+    document.write("Current time is :" + myTime);                   // display day here
+   </script>
+  </body>
+</html>

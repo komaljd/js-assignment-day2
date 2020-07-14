@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment one</title>
+    <!-- style here -->
+    <style>
+        .btn{ padding: 10px 20px; border: 0; background-color:red; color: #fff; cursor: pointer;
+         display: block; margin: 20px auto; }
+         body{
+             text-align: center;
+         }
+    </style>
+</head>
+<body>
+    <!-- print fucnciton -->
+    <h1 style="color:blue; text-align:center">DISPLAY MULTIPLE DATE FORMATE</h1>
+    <hr>
+    
+    <h3>Sample Output:</h3>
+
+   <!-- External script here -->
+   <script>
+       var date, dd, mm, yyyy;
+       date   = new Date();
+       dd     = date.getDate();
+       mm     = date.getMonth()+1;
+       yyyy   = date.getFullYear();
+
+        date = dd + '-' + mm + '-' + yyyy + '<br> <br>';
+        document.write("dd-mm-yyyy: " + date);
+        
+        date = dd + '/' + mm + '/' + yyyy + '<br> <br>';
+        document.write("dd/mm/yyyy: " + date);
+
+        date = mm + '-' + dd + '-' + yyyy + '<br> <br>';
+        document.write("mm-dd-yyyy: " + date);
+
+        date = mm + '/' + dd + '/' + yyyy + '<br> <br>';
+        document.write("mm/dd/yyyy: " + date);
+
+   </script>
+  </body>
+</html>
